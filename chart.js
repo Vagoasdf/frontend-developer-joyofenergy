@@ -50,22 +50,10 @@ export const renderChart = (readings) => {
     data: data,
     options: {
       scales: {
-        y: {
-          grid: {
-            display: false,
-          },
-        },
-        x: {
-          grid: {
-            display: false,
-          },
-        },
+        y: { grid: {display: false} },
+        x: { grid: {display: false} },
       },
-      plugins: {
-        legend: {
-          display: false,
-        },
-      },
+      plugins: { legend: { display: false} },
       maintainAspectRatio: false,
     },
   });
