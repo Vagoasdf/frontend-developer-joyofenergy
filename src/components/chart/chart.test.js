@@ -1,4 +1,4 @@
-import { formatDateLabel } from "./chart";
+import { formatDateLabel } from "../chart";
 
 describe("#chart formatDateLabel", () => {
   it("should format date label", () => {

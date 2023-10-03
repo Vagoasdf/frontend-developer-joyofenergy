@@ -1,5 +1,5 @@
-import { renderChart } from "./chart.js";
-import { getReadings, groupByDay, sortByTime } from "./reading";
+import { renderChart } from "./components/chart.js";
+import { getReadings, groupByDay, sortByTime } from "./data/reading.js";
 
 
 async function reloadReadings() {
