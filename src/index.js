@@ -1,4 +1,4 @@
-import { renderChart } from "./components/chart.js";
+import { renderChart } from "./components/chart/chart.js";
 import { getReadings, groupByDay, sortByTime } from "./data/reading.js";
 
 
