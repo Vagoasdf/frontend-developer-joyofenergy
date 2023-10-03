@@ -1,3 +1,5 @@
+
+// Gets n readings from a random hourly value between 0.4 and 1.1, simulating a sensor list of readings.
 export const getReadings = async (length = 1200) => {
   const current = Date.now();
   const hour = 1000 * 60 * 60;
@@ -15,8 +17,10 @@ export const groupByDay = (readings) => {
       readingDate.getMonth(),
       readingDate.getDate()
     ).getTime();
+
     if (!curr[day]) curr[day] = 0;
     curr[day] += value;
+
     return curr;
   }, {});
 
