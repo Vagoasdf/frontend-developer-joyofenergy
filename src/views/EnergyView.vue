@@ -1,5 +1,5 @@
 <script setup>
-import EnergyChart from '../EnergyChart/EnergyChart.vue'
+import EnergyChart from '@/components/EnergyChart/EnergyChart.vue'
 
 import { getReadings, groupByDay, sortByTime } from '@/components/reading/reading'
 
@@ -19,8 +19,8 @@ function acumulatedKW(readings){
 }
 
 let readings = dailyReadings()
-
 </script>
+
 <template>
     <article class="bg-very-light-grey p3 flex-auto overflow-auto">
         <h1 class="regular darkgray line-height-1 mb3">Energy consumption</h1>
@@ -39,3 +39,15 @@ let readings = dailyReadings()
         </section>
     </article>
 </template>
+
+<style>
+@import '../assets/index.css';
+
+
+@media (min-width: 1024px) {
+  .home {
+    min-height: 100vh;
+    display: flex;
+  }
+}
+</style>
