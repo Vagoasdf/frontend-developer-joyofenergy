@@ -1,5 +1,32 @@
 <script setup>
 
+/**
+ * 
+ * Chart not working until we install vuerchartJS
+ * 
+import { renderChart } from '../components/chart/chart'
+import { getReadings, groupByDay, sortByTime } from '../components/reading/reading'
+
+async function reloadReadings() {
+  const readings = await getReadings()
+  let daysAgo = 30
+  let dailyReadings = sortByTime(groupByDay(readings).slice(-daysAgo))
+  renderChart(dailyReadings)
+
+  let kWAcumm = 0
+  for (let readingIndex in dailyReadings) {
+    console.log(dailyReadings[readingIndex])
+    kWAcumm += dailyReadings[readingIndex].value
+  }
+}
+
+reloadReadings()
+
+const reloadButton = document.querySelector('button')
+reloadButton.addEventListener('click', reloadReadings)
+
+ */
+
 </script>
 
 <template>
