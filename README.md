@@ -1,3 +1,7 @@
+# About the Repository
+
+This Repository is expanded an expanded excersice based on the original forked repository, as if it was developed with the Vue Framework. It´s being expanded as a code practice excercise by Bruno Gutierrez Rios (@vagoasdf) to rust off my skills at Frontend SPA Dev on a more realistic hands-on approach
+
 # Introducing JOI Energy
 
 JOI Energy is a new start-up in the energy industry. They provide their customers with smart meters that record their
@@ -35,3 +39,4 @@ $ npm test
 
 TypeScript support is out-of-box.
 You can create *.ts files or import it into any of the existing files.
+
