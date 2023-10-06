@@ -1,44 +1,30 @@
 {
-  "name": "joi-energy-fe",
-  "version": "1.0.0",
-  "description": "",
+  "name": "joyofenergy",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "test": "jest",
-    "test-watch": "jest --watchAll",
-    "start": "snowpack dev",
-    "format": "prettier -w ./*.js"
-  },
-  "contributors": [
-    "Anish George",
-    "Asha Beirne",
-    "Derui Deng",
-    "Gabriel McCallin",
-    "Giamir Buoncristiani",
-    "Isadora Barros",
-    "Paul Venhaus",
-    "Tuomas Nylund"
-  ],
-  "license": "ISC",
-  "engines": {
-    "node": "^14.16.1"
-  },
-  "devDependencies": {
-    "@babel/plugin-transform-modules-commonjs": "^7.13.8",
-    "@types/jest": "^26.0.19",
-    "jest": "^26.6.3",
-    "prettier": "^2.3.1",
-    "snowpack": "^3.8.8"
-  },
-  "babel": {
-    "env": {
-      "test": {
-        "plugins": [
-          "@babel/plugin-transform-modules-commonjs"
-        ]
-      }
-    }
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test:unit": "vitest",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
+    "format": "prettier --write src/"
   },
   "dependencies": {
-    "chart.js": "^3.2.1"
+    "vue": "^3.3.4",
+    "vue-router": "^4.2.4"
+  },
+  "devDependencies": {
+    "@rushstack/eslint-patch": "^1.3.3",
+    "@vitejs/plugin-vue": "^4.3.4",
+    "@vitejs/plugin-vue-jsx": "^3.0.2",
+    "@vue/eslint-config-prettier": "^8.0.0",
+    "@vue/test-utils": "^2.4.1",
+    "eslint": "^8.49.0",
+    "eslint-plugin-vue": "^9.17.0",
+    "jsdom": "^22.1.0",
+    "prettier": "^3.0.3",
+    "vite": "^4.4.9",
+    "vitest": "^0.34.4"
   }
 }
