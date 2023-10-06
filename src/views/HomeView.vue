@@ -1,31 +1,26 @@
 <script setup>
 
-/**
- * 
- * Chart not working until we install vuerchartJS
- * 
-import { renderChart } from '../components/chart/chart'
+
+import EnergyChart from '../components/chart/energyChart.vue'
 import { getReadings, groupByDay, sortByTime } from '../components/reading/reading'
 
-async function reloadReadings() {
-  const readings = await getReadings()
+function dailyReadings() {
+  const readings =  getReadings()
   let daysAgo = 30
   let dailyReadings = sortByTime(groupByDay(readings).slice(-daysAgo))
-  renderChart(dailyReadings)
-
-  let kWAcumm = 0
-  for (let readingIndex in dailyReadings) {
-    console.log(dailyReadings[readingIndex])
-    kWAcumm += dailyReadings[readingIndex].value
-  }
+  return dailyReadings
 }
 
-reloadReadings()
+function acumulatedKW(readings){
+  const kWAcumm=0
+  for ( let readingIndex in props.readings ) {
+    kWAcumm += props.readings[readingIndex].value
+  }
+  return  kWAcumm
+}
 
-const reloadButton = document.querySelector('button')
-reloadButton.addEventListener('click', reloadReadings)
+let readings = dailyReadings()
 
- */
 
 </script>
 
@@ -92,6 +87,9 @@ reloadButton.addEventListener('click', reloadReadings)
           </button>
         </section>
         <section class="chartHeight mb3">
+          <EnergyChart
+          :readings = "readings"
+          />
           <canvas id="usageChart"></canvas>
         </section>
       </article>

@@ -1,5 +1,5 @@
 // Gets n readings from a random hourly value between 0.4 and 1.1, simulating a sensor list of readings.
-export const getReadings = async (length = 1200) => {
+export const getReadings =  (length = 1200) => {
   const current = Date.now()
   const hour = 1000 * 60 * 60
   return [...new Array(length)].map((_, index) => ({
